@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('f-person/git-blame.nvim')
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
