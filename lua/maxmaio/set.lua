@@ -1,6 +1,5 @@
 vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.number = false
+vim.opt.number = true
 vim.opt.numberwidth = 1
 
 vim.opt.tabstop = 2

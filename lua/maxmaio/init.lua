@@ -5,3 +5,4 @@ require("maxmaio.set")
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 vim.cmd('colorscheme gruvbox')
 vim.cmd [[set clipboard=unnamed]]
+vim.g.nvim_tree_respect_buf_cwd = 1
