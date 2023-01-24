@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  use('morhetz/gruvbox')
+  use("luisiacc/gruvbox-baby")
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('jiangmiao/auto-pairs')
   use('windwp/nvim-ts-autotag')
@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use('prettier/vim-prettier')
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {

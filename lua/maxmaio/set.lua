@@ -1,6 +1,7 @@
 vim.opt.nu = true
 vim.opt.number = true
 vim.opt.numberwidth = 1
+vim.api.nvim_set_option_value("colorcolumn", "120", {})
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
