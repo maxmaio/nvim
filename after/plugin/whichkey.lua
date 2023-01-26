@@ -13,6 +13,9 @@ wk.register({
     name = "code actions",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "code action" },
   },
+  d = {
+    c = { "<cmd>cd ~/.config/nvim<CR>", "Neovim Conf" },
+  },
   e = {
     "<cmd>:NvimTreeToggle<cr>", "Toggle Tree"
   },
