@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 
 return require('packer').startup(function(use)
-
+  -- package manager
   use 'wbthomason/packer.nvim'
 
   use {
@@ -10,14 +10,22 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  -- colorscheme
   use("luisiacc/gruvbox-baby")
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+  -- Insert or delete brackets, parens, quotes in pair.
   use('jiangmiao/auto-pairs')
+  -- Insert or delete html tags in pair
   use('windwp/nvim-ts-autotag')
+  -- view treesitter ast
   use('nvim-treesitter/playground')
+  -- an undo tree tracker
   use('mbbill/undotree')
+  -- git wrapper thing... wouldn't reccomend
   use('tpope/vim-fugitive')
+  -- git-blame
   use('f-person/git-blame.nvim')
+  -- handy github like markdown previewer
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
     setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {
@@ -27,7 +35,9 @@ return require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  -- prettier formatter
   use('prettier/vim-prettier')
+  -- lsp easy setup thing
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -47,7 +57,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
-  -- Lua
+  -- makes it easy to create leader menu
   use {
     "folke/which-key.nvim",
     config = function()
