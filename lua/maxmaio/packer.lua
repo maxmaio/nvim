@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  use('github/copilot.vim')
   -- makes it easy to create leader menu
   use {
     "folke/which-key.nvim",
