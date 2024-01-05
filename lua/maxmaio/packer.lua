@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
   use('f-person/git-blame.nvim')
   -- handy github like markdown previewer
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -58,6 +58,11 @@ return require('packer').startup(function(use)
       { 'rafamadriz/friendly-snippets' },
     }
   }
+  use {
+    'ruifm/gitlinker.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+  }
+
   use('github/copilot.vim')
   -- makes it easy to create leader menu
   use {
