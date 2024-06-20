@@ -10,8 +10,10 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+
   -- colorscheme
   use("luisiacc/gruvbox-baby")
+  use("ellisonleao/gruvbox.nvim")
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   -- Insert or delete brackets, parens, quotes in pair.
   use('jiangmiao/auto-pairs')
